@@ -11,6 +11,7 @@ function getTime(){
     `${hours < 10 ? `0${hours}` : hours }:${miniutes < 10 ? `0${miniutes}` : miniutes }:${seconds < 10 ? `0${seconds}` : seconds }`;
 }
 
+
 function init() {
     setInterval(getTime,1000);
 }
