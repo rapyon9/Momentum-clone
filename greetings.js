@@ -28,13 +28,16 @@ function paintGreetings(text){
     const date = new Date();
     const hours = date.getHours();
 
-    if(hours >= 5 && hours < 12){
-        greetings.innerText = `Good morning, ${text}`;
-    } else if(hours >=12 && hours < 18) {
-        greetings.innerText = `Good afternoon, ${text}`;
-    } else {
-        greetings.innerText = `Good evening, ${text}`;
+    function paintTime(){
+        if(hours >= 5 && hours < 12){
+            greetings.innerText = `Good morning, ${text}`;
+        } else if(hours >=12 && hours < 18) {
+            greetings.innerText = `Good afternoon, ${text}`;
+        } else {
+            greetings.innerText = `Good evening, ${text}`;
+        }
     }
+    setInterval(paintTime);
 }
 
 function loadName(){
