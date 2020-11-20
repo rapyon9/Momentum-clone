@@ -37,7 +37,7 @@ function paintGreetings(text){
             greetings.innerText = `Good evening, ${text}`;
         }
     }
-    setInterval(paintTime);
+    setInterval(paintTime,1000);
 }
 
 function loadName(){
