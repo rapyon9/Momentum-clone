@@ -9,19 +9,32 @@ function saveToDos(toDos){
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+function deleteToDo(event) {
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id)
+    });
+    toDos = cleanToDos;
+    saveToDos(toDos);
+}
+
 function paintToDos(text) {
     const li = document.createElement("h5");
     const checkBox = document.createElement("INPUT");
     checkBox.setAttribute("type","checkbox");
     const span = document.createElement("span");
     span.innerText = text;
-    const btn = document.createElement("button");
-    btn.innerText = "X"
+    const delBtn = document.createElement("button");
+    delBtn.innerText = "X"
+    delBtn.addEventListener("click", deleteToDo);
     const newId =  toDos.length + 1; 
 
     li.appendChild(checkBox);
     li.appendChild(span);
-    li.appendChild(btn);
+    li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
     
