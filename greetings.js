@@ -30,11 +30,11 @@ function paintGreetings(text){
 
     function paintTime(){
         if(hours >= 5 && hours < 12){
-            greetings.innerText = `Good morning, ${text}`;
+            greetings.innerText = `Good morning, ${text}.`;
         } else if(hours >=12 && hours < 18) {
-            greetings.innerText = `Good afternoon, ${text}`;
+            greetings.innerText = `Good afternoon, ${text}.`;
         } else {
-            greetings.innerText = `Good evening, ${text}`;
+            greetings.innerText = `Good evening, ${text}.`;
         }
     }
     setInterval(paintTime,1000);

@@ -3,26 +3,58 @@
     <head>
         <title>Momentum clone</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
-        <div class="js-clock">
-            <h1 class="clock">00:00</h1>
+        <div class="top-row">
+            <div class="top-row-left">
+                <h6>Links</h6>
+                <h6><i class="fas fa-search"></i></h6>
+            </div>
+            <div class="top-row-right">
+                <h6 class="js-weather">weather</h6>
+            </div>
         </div>
 
-        <form class="js-form-greetings">
-            <input type="text" placeholder="Hello, what's your name?">
-        </form>
-        <h3 class="js-greetings"></h3>
+        <div class="region center-above">
+        </div>
 
-        <form class="js-form-todo">
-            <input type="text" placeholder="What is your main focus for today?">
-        </form>
-        <ul class="js-todo_list">
-        </ul>
+        <div class="region center">
+            <div class="js-clock">
+                <h1 class="clock">00:00</h1>
+            </div>
+            <div class="greetings">
+            <form class="js-form-greetings">
+                <input type="text" placeholder="Hello, what's your name?">
+            </form>
+            <h3 class="js-greetings"></h3>
+        </div>
+        </div>
 
-        <h6 class="js-weather">weather</h6>
+        <div class="region center-below">
+            <form class="js-form-todo">
+                <input type="text" placeholder="What is your main focus for today?">
+            </form>
+            <ul class="js-todo_list">
+            </ul>
+        </div>
+
+        <div class="bottom-row">
+            <div class="bottom-row-left">
+                <h6><i class="fas fa-cog"></i></h6>
+                <h6>where is this?</h6>
+            </div>
+
+            <div class="bottom-row-center">
+                <h6>"Some of us think holding on makes us strong, but sometimes it is letting go."</h6>
+            </div>
+
+            <div class="bottom-row-right">
+                <h6>Todo</h6>
+            </div>
+        </div>
+
 
 
         <script src="clock.js"></script>
@@ -30,5 +62,10 @@
         <script src="todo.js"></script>
         <script src="background.js"></script>
         <script src="weather.js"></script>
+
+        <script
+        src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous"
+      ></script>
     </body>
 </html>
