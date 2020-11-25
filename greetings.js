@@ -2,8 +2,26 @@ const greetingsForm = document.querySelector(".js-form-greetings");
 const greetingsInput = greetingsForm.querySelector("input");
 const greetings = document.querySelector("h3");
 
+// function hiding(){}
+const hidingTopRow = document.querySelector(".top-row"),
+    hidingBotRow = document.querySelector(".bottom-row"),
+    hidingClock = document.querySelector("h1");
+
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
+const HIDING_CN = "hiding";
+
+function hiding() {
+    hidingTopRow.classList.add(HIDING_CN);
+    hidingBotRow.classList.add(HIDING_CN);
+    hidingClock.classList.add(HIDING_CN);
+}
+
+function unHiding() {
+    hidingTopRow.classList.remove(HIDING_CN);
+    hidingBotRow.classList.remove(HIDING_CN);
+    hidingClock.classList.remove(HIDING_CN);
+}
 
 function saveName(text){
     localStorage.setItem(USER_LS, text);
@@ -23,7 +41,9 @@ function askForName(){
 }
 
 function paintGreetings(text){
+    unHiding();
     greetingsForm.classList.remove(SHOWING_CN);
+
 
     const date = new Date();
     const hours = date.getHours();
@@ -43,6 +63,7 @@ function paintGreetings(text){
 function loadName(){
     const userName = localStorage.getItem(USER_LS);
     if(userName === null) {
+        hiding();
         askForName();
     } else {
         paintGreetings(userName);
