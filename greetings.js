@@ -5,22 +5,24 @@ const greetings = document.querySelector("h3");
 // function hiding(){}
 const hidingTopRow = document.querySelector(".top-row"),
     hidingBotRow = document.querySelector(".bottom-row"),
-    hidingClock = document.querySelector("h1");
+    hidingClock = document.querySelector("h1"),
+    hidingToDo = document.querySelector(".js-form-todo");
 
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
-const HIDING_CN = "hiding";
 
 function hiding() {
-    hidingTopRow.classList.add(HIDING_CN);
-    hidingBotRow.classList.add(HIDING_CN);
-    hidingClock.classList.add(HIDING_CN);
+    hidingTopRow.style.visibility="hidden";
+    hidingBotRow.style.visibility="hidden";
+    hidingClock.style.display="none";
+    hidingToDo.style.display="none";
 }
 
 function unHiding() {
-    hidingTopRow.classList.remove(HIDING_CN);
-    hidingBotRow.classList.remove(HIDING_CN);
-    hidingClock.classList.remove(HIDING_CN);
+    hidingTopRow.style.visibility="visible";
+    hidingBotRow.style.visibility="visible";
+    hidingClock.style.display="block";
+    hidingToDo.style.display="block";
 }
 
 function saveName(text){

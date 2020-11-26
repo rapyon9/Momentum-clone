@@ -36,10 +36,6 @@ body {
 }
 
 /* center */
-.region .center {
-    
-}
-
 .center-above {
     height: 180px;
 }
@@ -69,6 +65,8 @@ body {
 .js-form-greetings {
     display: none;
 }
+
+
 .js-form-greetings input {
     width: 582px;
     height: 55px;
@@ -88,12 +86,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
     height: 188.2px;
 }
 
+.js-todo_list {
+    margin-top: 10px;
+}
+.js-todo_list h5 {
+    font-size: 20px;
+}
+
+.js-todo_list h5 span {
+    padding : 0px 10px;
+}
+
+
+
+
 /* bottom */
 .bottom-row {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,8 +120,14 @@ body {
 
 .bottom-row-left {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 20%;
     color: rgb(216, 211, 211);
+}
+
+.bottom-row-left h6:first-child {
+    margin-right: 10px;
 }
 
 .bottom-row-center {
@@ -113,17 +135,34 @@ body {
 }
 
 .bottom-row-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 20%;
     color: rgb(216, 211, 211);
 }
 
+.js-form-todo h3 {
+    font-size: 35px;
+}
+
+.js-form-todo input {
+    width: 560px;
+    height: 40px;
+    background-color: transparent;
+    border :none;
+    border-bottom: 2px solid white;
+    padding: 4px 1px 2px 2px;
+}
+
+.js-form-todo input:focus {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
 
 
-
-
-
-
-
+/* background*/
 
 .background-img {
     z-index: -3;
@@ -134,10 +173,8 @@ body {
     height: 100%;
 }
 
+/*js-className*/
+
 .showing {
     display: block;
-}
-
-.hiding {
-    display: none;
 }
